@@ -26,7 +26,10 @@ libvecamole_la_SOURCES=\
 	deps/mapnik-vector-tile/src/vector_tile_datasource_pbf.cpp \
 	deps/mapnik-vector-tile/src/vector_tile_projection.cpp \
 	src/vector_tile.pb.cc \
-	src/clipper.cpp
+	src/clipper.cpp \
+	src/map.cpp \
+	src/request.cpp \
+	src/create.cpp
 
 BUILT_SOURCES = \
 	private_include/vector_tile.pb.h \

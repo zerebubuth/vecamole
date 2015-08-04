@@ -27,3 +27,7 @@ depcomp
 .dirstamp
 .libs/
 libvecamole.la
+src/clipper.cpp
+src/vector_tile.pb.cc
+*.lo
+*.o
