@@ -14,6 +14,10 @@ AC_CONFIG_MACRO_DIR([m4])
 AC_PROG_CXX
 AC_PROG_INSTALL
 AC_PROG_MAKE_SET
+AC_CHECK_PROG([HAVE_PERL],[perl],[yes],[no])
+if test "x$HAVE_PERL" = "xno"; then
+   AC_MSG_ERROR([cannot find Perl program, but this is required. Please install the perl package])
+fi
 
 AC_HEADER_STDC
 AC_LANG_CPLUSPLUS

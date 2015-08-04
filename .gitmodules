@@ -1,0 +1,9 @@
+[submodule "mapnik-vector-tile"]
+	path = deps/mapnik-vector-tile
+	url = https://github.com/mapbox/mapnik-vector-tile.git
+[submodule "deps/protozero"]
+	path = deps/protozero
+	url = https://github.com/mapbox/protozero.git
+[submodule "deps/clipper"]
+	path = deps/clipper
+	url = https://github.com/mapnik/clipper.git

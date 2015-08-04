@@ -22,3 +22,8 @@ config.status
 include/vecamole/config.h
 include/vecamole/stamp-h1
 libtool
+depcomp
+.deps/
+.dirstamp
+.libs/
+libvecamole.la
