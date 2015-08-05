@@ -35,13 +35,17 @@ libvecamole_la_LIBADD = \
 	@MAPNIK_LIBS@ @PROTOC_LIBS@
 
 check_PROGRAMS = \
-	test/test_create
+	test/test_create \
+	test/test_request_zxy
 
 TESTS = $(check_PROGRAMS)
 
 test_test_create_SOURCES = test/test_create.c
 test_test_create_CPPFLAGS = -Iinclude
 test_test_create_LDADD = libvecamole.la
+test_test_request_zxy_SOURCES = test/test_request_zxy.c
+test_test_request_zxy_CPPFLAGS = -Iinclude
+test_test_request_zxy_LDADD = libvecamole.la
 
 BUILT_SOURCES = \
 	private_include/vector_tile.pb.h \

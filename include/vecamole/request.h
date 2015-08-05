@@ -26,6 +26,10 @@ vecamole_request_t *vecamole_request_zxy(int width, int height,
 
 int vecamole_request_delete(vecamole_request_t *request);
 
+int vecamole_request_extent(vecamole_request_t *request,
+                            double *xmin, double *ymin,
+                            double *xmax, double *ymax);
+
 void vecamole_request_set_buffer_size(vecamole_request_t *request, int buffer_size);
 
 #ifdef __cplusplus
