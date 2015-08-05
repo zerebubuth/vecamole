@@ -50,12 +50,14 @@ typedef enum {
 } vecamole_scaling_method_t;
 
 typedef struct vecamole_create_options {
+  unsigned int path_multiplier;
   double scale_factor;
   unsigned int offset_x, offset_y;
   double area_threshold;
   vecamole_image_format_t image_format;
   vecamole_scaling_method_t scaling_method;
   double simplify_distance;
+  double scale_denominator;
 } vecamole_create_options_t;
 
 vecamole_create_options_t *vecamole_create_options_default();

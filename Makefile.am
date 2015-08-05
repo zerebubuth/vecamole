@@ -29,7 +29,8 @@ libvecamole_la_SOURCES = \
 	src/clipper.cpp \
 	src/map.cpp \
 	src/request.cpp \
-	src/create.cpp
+	src/create.cpp \
+	src/datasource.cpp
 
 libvecamole_la_LIBADD = \
 	@MAPNIK_LIBS@ @PROTOC_LIBS@

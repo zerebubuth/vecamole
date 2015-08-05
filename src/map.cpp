@@ -8,6 +8,8 @@
 #include "vecamole/map.h"
 #include <mapnik/map.hpp>
 #include <mapnik/load_map.hpp>
+#include <stdexcept>
+#include <iostream>
 
 vecamole_map_t *vecamole_map_new(int width, int height) {
   try {
@@ -90,9 +92,12 @@ int vecamole_map_load_string(vecamole_map_t *map, const char *string, int strict
         cpp_base_path = base_path;
       }
 
-      mapnik::load_map(*ptr, cpp_string, cpp_strict, cpp_base_path);
+      mapnik::load_map_string(*ptr, cpp_string, cpp_strict, cpp_base_path);
 
       return 0;
+
+    } catch (const std::exception &e) {
+      std::cerr << "EXCEPTION: " << e.what() << std::endl;
 
     } catch (...) {
       // not sure what exceptions mapnik::load_map could throw
