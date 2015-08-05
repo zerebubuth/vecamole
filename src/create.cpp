@@ -27,9 +27,18 @@ vecamole_create_options_t *vecamole_create_options_default() {
   }
 }
 
+int vecamole_create_options_delete(vecamole_create_options_t *ptr) {
+  if (ptr != nullptr) {
+    delete ptr;
+    return 0;
+  }
+
+  return 1;
+}
+
 int vecamole_create_tile(
   void *writer_private,
-  vecamole_tile_writer_func_t *writer,
+  vecamole_tile_writer_func_t writer,
   vecamole_map_t *map,
   vecamole_request_t *request,
   vecamole_create_options_t *options) {

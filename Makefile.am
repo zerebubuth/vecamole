@@ -14,10 +14,10 @@ LIBTOOL_DEPS = @LIBTOOL_DEPS@
 libtool: $(LIBTOOL_DEPS)
 	$(SHELL) ./config.status libtool
 
-lib_LTLIBRARIES=\
+lib_LTLIBRARIES = \
 	libvecamole.la
 
-libvecamole_la_SOURCES=\
+libvecamole_la_SOURCES = \
 	deps/mapnik-vector-tile/src/vector_tile_backend_pbf.cpp \
 	deps/mapnik-vector-tile/src/vector_tile_compression.cpp \
 	deps/mapnik-vector-tile/src/vector_tile_datasource.cpp \
@@ -30,6 +30,18 @@ libvecamole_la_SOURCES=\
 	src/map.cpp \
 	src/request.cpp \
 	src/create.cpp
+
+libvecamole_la_LIBADD = \
+	@MAPNIK_LIBS@ @PROTOC_LIBS@
+
+check_PROGRAMS = \
+	test/test_create
+
+TESTS = $(check_PROGRAMS)
+
+test_test_create_SOURCES = test/test_create.c
+test_test_create_CPPFLAGS = -Iinclude
+test_test_create_LDADD = libvecamole.la
 
 BUILT_SOURCES = \
 	private_include/vector_tile.pb.h \

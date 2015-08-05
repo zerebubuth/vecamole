@@ -29,4 +29,12 @@ REQUIRE_PROTOC
 
 AC_CONFIG_FILES([Makefile])
 
+# Debian resets this to no, but this break both Spot and the libtool
+# test suite itself.  Instead of requiring developer to install a
+# non-patched version of Libtool on any Debian they use, we just
+# cancel the effect of Debian's patch here.
+# see: http://git.lrde.epita.fr/?p=spot.git;a=commitdiff;h=0e74b76521341f670f6b76f8ef24a6dcf6e3813b
+link_all_deplibs=yes
+link_all_deplibs_CXX=yes
+
 AC_OUTPUT

@@ -31,3 +31,8 @@ src/clipper.cpp
 src/vector_tile.pb.cc
 *.lo
 *.o
+*.trs
+test-driver
+test-suite.log
+test/*.log
+test/test_create
