@@ -17,6 +17,18 @@ libtool: $(LIBTOOL_DEPS)
 lib_LTLIBRARIES = \
 	libvecamole.la
 
+include_HEADERS = \
+	include/vecamole.h
+
+vecamole_includedir = $(includedir)/vecamole
+vecamole_include_HEADERS = \
+	include/vecamole/tile.h \
+	include/vecamole/map.h \
+	include/vecamole/create.h \
+	include/vecamole/datasource.h \
+	include/vecamole/config.h \
+	include/vecamole/request.h
+
 libvecamole_la_SOURCES = \
 	deps/mapnik-vector-tile/src/vector_tile_backend_pbf.cpp \
 	deps/mapnik-vector-tile/src/vector_tile_compression.cpp \
