@@ -37,3 +37,4 @@ test-suite.log
 test/*.log
 test/test_create
 test/test_request_zxy
+vecamole.pc

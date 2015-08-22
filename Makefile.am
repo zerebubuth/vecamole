@@ -29,6 +29,9 @@ vecamole_include_HEADERS = \
 	include/vecamole/config.h \
 	include/vecamole/request.h
 
+pkgconfigdir = $(libdir)/pkgconfig
+pkgconfig_DATA = vecamole.pc
+
 libvecamole_la_SOURCES = \
 	deps/mapnik-vector-tile/src/vector_tile_backend_pbf.cpp \
 	deps/mapnik-vector-tile/src/vector_tile_compression.cpp \
@@ -64,7 +67,8 @@ BUILT_SOURCES = \
 	private_include/vector_tile.pb.h \
 	private_include/clipper.hpp \
 	src/vector_tile.pb.cc \
-	src/clipper.cpp
+	src/clipper.cpp \
+	vecamole.pc
 
 CLEANFILES = $(BUILT_SOURCES)
 

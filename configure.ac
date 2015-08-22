@@ -27,7 +27,7 @@ AX_BOOST_BASE([1.54],,[AC_MSG_ERROR([cannot find Boost libraries, but these are 
 REQUIRE_MAPNIK([3.0.2])
 REQUIRE_PROTOC
 
-AC_CONFIG_FILES([Makefile])
+AC_CONFIG_FILES([Makefile vecamole.pc])
 
 # Debian resets this to no, but this break both Spot and the libtool
 # test suite itself.  Instead of requiring developer to install a
