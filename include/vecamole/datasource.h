@@ -13,6 +13,7 @@ extern "C" {
 #endif /* __cplusplus */
 
 int vecamole_register_datasources(const char *dir, int recurse);
+int vecamole_register_default_datasources();
 
 #ifdef __cplusplus
 }

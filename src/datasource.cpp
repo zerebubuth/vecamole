@@ -5,6 +5,7 @@
  * http://github.com/zerebubuth/vecamole/blob/master/COPYING
  */
 
+#include "vecamole/config.h"
 #include "vecamole/datasource.h"
 #include <mapnik/datasource_cache.hpp>
 
@@ -27,3 +28,6 @@ int vecamole_register_datasources(const char *dir, int recurse) {
   return -1;
 }
 
+int vecamole_register_default_datasources() {
+  return vecamole_register_datasources(MAPNIK_DEFAULT_INPUT_PLUGIN_DIR, 1);
+}
