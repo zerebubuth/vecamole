@@ -100,7 +100,8 @@ src/clipper.cpp: deps/clipper/cpp/clipper.cpp
 	perl -i -p -e "s/cInt y = 0/cInt _y = 0/g;" $@
 
 private_include/clipper.hpp: deps/clipper/cpp/clipper.hpp
-	$(AM_V_GEN)cp $< $@ && \
+	$(AM_V_GEN)mkdir -p private_include && \
+	cp $< $@ && \
 	perl -i -p -e "s/\.X/\.x/g;" $@ && \
 	perl -i -p -e "s/\->X/\->x/g;" $@ && \
 	perl -i -p -e "s/cInt X;/cInt x;/g;" $@ && \

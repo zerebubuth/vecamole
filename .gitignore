@@ -38,3 +38,8 @@ test/*.log
 test/test_create
 test/test_request_zxy
 vecamole.pc
+
+## NOTE! this is ignored for now, as it only contains generated files,
+## but we might end up using it for non-installed headers, so don't
+## assume this will always be ignored!
+private_include/
