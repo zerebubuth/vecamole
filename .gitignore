@@ -43,3 +43,5 @@ vecamole.pc
 ## but we might end up using it for non-installed headers, so don't
 ## assume this will always be ignored!
 private_include/
+
+.vagrant/
