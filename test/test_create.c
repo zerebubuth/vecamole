@@ -37,7 +37,7 @@ static const char *config =
 int main(int argc, char *argv[]) {
   int len = 0;
 
-  ASSERT(vecamole_register_datasources(MAPNIK_DEFAULT_INPUT_PLUGIN_DIR) == 0);
+  ASSERT(vecamole_register_datasources(MAPNIK_DEFAULT_INPUT_PLUGIN_DIR, 0) == 0);
 
   vecamole_map_t *map = vecamole_map_new(256, 256);
   ASSERT(map != NULL);
